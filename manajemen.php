@@ -173,7 +173,7 @@ $sosial_ekonomi = mysqli_query($mysqli, "SELECT * FROM sosial_ekonomi ORDER BY i
                                             <td class="text-center"><b><?php echo $no++ ?></b></td>
                                             <td class="text-center"> <img class="rounded"
                                                     style="margin-top: 9px;"
-                                                    src="/siskan/assets/img/ikan/<?php echo $data['image']; ?>"
+                                                    src="/siskan/assets/img/sarana/<?php echo $data['image']; ?>"
                                                      width="230" height="180"></td>
                                             <td class="text-center"><?php echo $data['nama_sarana'] ?></td>
                                             <td class="text-center"><?php echo $data['jumlah'] ?></td>

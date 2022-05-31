@@ -12,7 +12,7 @@ include_once("controller/connection.php");
     $tahun = $_POST['tahun'];
     $musim_ikan = $_POST['musim-ikan'];
     $tingkah_laku = $_POST['tingkah-laku'];
-    $ekstensi_diperbolehkan = array('png', 'jpg');
+    $ekstensi_diperbolehkan = array('png', 'jpg', 'jpeg');
     $nama_gambar = $_FILES['gambar-ikan']['name'];
     $x = explode('.', $nama_gambar);
     $ekstensi = strtolower(end($x));
@@ -22,7 +22,7 @@ include_once("controller/connection.php");
    
 
     if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
-        if ($ukuran < 1044070) {
+        if ($ukuran < 20440700) {
             move_uploaded_file($file_tmp, 'assets/img/ikan/' . $nama_gambar);
             $query = mysqli_query($mysqli, "INSERT INTO sumberdaya_ikan(
                 nama_indonesia,
